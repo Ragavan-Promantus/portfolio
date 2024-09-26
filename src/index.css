@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    cursor: url('https://i.sstatic.net/KDrS2.png'), pointer;
-}
-
 @layer base {
     html {
       font-family: "Ovo", serif;

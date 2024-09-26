@@ -5,9 +5,9 @@ module.exports = {
     theme: {
         extend: {
             cursor: {
-                custom: 'url(images/icons8-cursor.png), default',
-                // pointer: 'url(/src/images/r-letter.webp), pointer',
-            },
+                'fancy': 'url(./images/cursor1.png), default',
+                'pointer': 'url(./images/cursor-pointer.png), pointer',
+            }
         },
         fontSize: {
             sm: '0.8rem',
