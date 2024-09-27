@@ -20,6 +20,9 @@ module.exports = {
             '5xl': '3.052rem',
             '6xl': '4.052rem',
         },
+        animation: {
+            'spin-slow': 'spin 6s linear infinite',
+        },
     },
     plugins: [],
 }
