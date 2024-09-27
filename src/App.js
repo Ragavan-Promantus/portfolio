@@ -84,7 +84,7 @@ export default function App() {
                         <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools i use</h4>
                         <ul class="flex items-center gap-3 sm:gap-5">
                             <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                                <img src="/assets/vscode-xCMPv9CZ.png" alt="" class="w-5 sm:w-7" />
+                                <img src="https://elianajade.com/assets/vscode-xCMPv9CZ.png" alt="" class="w-5 sm:w-7" />
                             </li>
 
                             <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
