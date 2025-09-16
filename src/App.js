@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
+import CountUp from 'react-countup';
 import './index.css';
 import Header from './layout/header';
 import profile from '../src/images/r-letter.webp';
@@ -6,34 +9,193 @@ import gitHubLogo from '../src/images/github-6980894_960_720.webp';
 import awsLogo from '../src/images/aws-icon-2048x2048-ptyrjxdo.png';
 
 export default function App() {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
     return (
-        <div className="bg-white dark:bg-slate-800 dark:text-white cursor-fancy">
+        <div className="bg-white dark:bg-slate-800 dark:text-white cursor-fancy relative overflow-hidden">
+            {/* Animated background elements */}
+            <div className="fixed inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse dark:opacity-10"></div>
+                <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000 dark:opacity-10"></div>
+                <div className="absolute -bottom-8 left-20 w-80 h-80 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000 dark:opacity-10"></div>
+            </div>
+
             <Header />
 
-            {/* Page-1- start */}
-            <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
-                <img className='object-cover w-32 h-32 rounded-full' alt src={profile} />
-                <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>Hi! I'm Ragavan &#128075;</h3>
-                <h1 className='text-4xl sm:text-5xl lg:text-[66px] font-Ovo leading-none'>full-stack developer based in chennai.</h1>
-                <p class="max-w-2xl mx-auto font-Ovo">I am a full-stack developer from Chennai, Tamil Nadu, with 3 years of experience at Proflujo and Promantus.</p>
-                <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-                    <a href="#contact" class="cursor-pointer px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">contact me
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAWCAYAAABOm/V6AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADgSURBVHgB1ZZhDYMwEIVfUYAEJDAHSJgEHIADmAIkzMLmAAfMATjYHNxeQ5N10GT8YNftSx45fjTvNeWOAjsiIhk1UCNVIwY0buWdBtrQtJA1UYLUgSAdtKFpGQhyplJoQsOcui+CDDGCZK5TfOx7Bk3+JwiLKnB2Wljf3NgKcbkmfPSIS2/cueTUt1uncj4+J2NMCw240SbwPbTQgmZdIIDOH5ZGqcyjekkJDVyAIdCOBTSQ18XGZ7TzABrIL4xoWd+sNgVIsC+TV9+oA+fA9GmRwc5w50fMg+/CAI8ta554HhFHncIuNwAAAABJRU5ErkJggg==" alt="" class="w-4" />
-                    </a>
-                    <a href="../../dev-icon.png" download="" class="cursor-pointer px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">my resume
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALESURBVHgB7Zk9cuIwFMefbYp0a6DZ0jtAvZTpFm4AJ1i2261Cuu3inIC9QUi3Zcp0ITcgZQaYMRcAp+Yr/5fIHtlJJpEiZciM/zMeyfryD/np6Vk4ZFiNRqO52+2ucMWu63Ynk8mYDMolwwLoCRLfcZwA6REZlnFgyE8ygA/IsGwAW1UBbFsFsG0VwLZVANtWAWxbBbBtFcC29emASyqNgyDwS6VSjz9/ZrPZkN6her3e1xlHaYY9zxsgGeDz56xWq52RpkTfh3EAHqr0VQLGA3wp38PDTkhR3If7SkVNUpAS8Hq9PkYSS0WhCrRoGyb3MIkIY/ZJQUrAEYTZadNT6FcfmoflMfgYgMckBSl7CXHO0M0VD2CXP1/qI+pCuQyz+0vnzMIjDS0Wi6hcLs8x252kjPOVSuUa2RauQBRH1Wr1Bukl5WDhHf6ThrSAWcvlcgxARwAm6gDmIFmcyHPyG9eB1OYUsP9IUw6Olo62220f9jRarVbHMKlYZQDhlt668E6n02lIisIzrujxgObcwyxdYka+4qaJ9JZnTmUwmMcI5lFG30OyAAv772Dsv8gy46FL0tGSrvCKedc6f6me63RgWXjzMp9vLJYAdA/Jc29nLOqMyGjwg02AfXQKLTaGNhmUUWBesADssgnA7oabzaatuohfUyZak2MFXYmdq0eGhB+fYXL5tUn37wa2IDngijImkf81+yCZ6eFvCFCni0Qc8++VwPRduo3ZJOZSwQ/aP6XxMlhveIYvpEr/LaHiR4nDBsquqxEHL7xXL6UKdkO8jWoHKCbEsJjRkAQXOwdsQN8cUckflplvNG4g7DvCdYcrxr1Rn5p7XoDkCz2Gpi3KeSwRkg6dpEAx6vpopYFTGg9z1IVge45f0jSxgRhSDJ4/cvzsPNeKQzokLeFSfPaFtl1esoGxGbLnYmeAWR3l290Dvv43W3IHdnwAAAAASUVORK5CYII=" alt="" class="w-4" />
-                    </a>
+            {/* Hero Section */}
+            <section className='relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
+                <div className='w-full max-w-4xl text-center mx-auto'>
+                    <motion.div
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                        className='relative mb-8'
+                    >
+                        <img 
+                            className='object-cover w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-purple-500 to-pink-500 shadow-2xl' 
+                            src={profile} 
+                            alt="Ragavan"
+                        />
+                        <motion.div
+                            className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-75 blur"
+                            animate={{ 
+                                scale: [1, 1.1, 1],
+                                rotate: [0, 360]
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                repeatType: "reverse"
+                            }}
+                        />
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
+                        <h3 className='flex items-center justify-center gap-2 text-xl md:text-2xl mb-6 font-Ovo text-gray-700 dark:text-gray-300'>
+                            Hi! I'm Ragavan 
+                            <motion.span
+                                animate={{ rotate: [0, 20, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}
+                            >
+                                👋
+                            </motion.span>
+                        </h3>
+                    </motion.div>
+
+                    <motion.h1 
+                        className='text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-Ovo leading-tight mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent'
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8, duration: 1 }}
+                    >
+                        <TypeAnimation
+                            sequence={[
+                                'Associate Software Engineer',
+                                2000,
+                                'Full-Stack Developer',
+                                2000,
+                                'Spring Boot Expert',
+                                2000,
+                                'React.js Developer',
+                                2000,
+                            ]}
+                            wrapper="span"
+                            speed={50}
+                            repeat={Infinity}
+                        />
+                    </motion.h1>
+
+                    <motion.p 
+                        className="max-w-3xl mx-auto font-Ovo text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.2, duration: 0.8 }}
+                    >
+                        Associate Software Engineer at <span className="font-semibold text-purple-600 dark:text-purple-400">Promantus India</span> with 3+ years of experience building secure, scalable applications using Spring Boot, Laravel, React.js, and AWS.
+                    </motion.p>
+
+                    <motion.div 
+                        className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8"
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.5, duration: 0.8 }}
+                    >
+                        <motion.a 
+                            href="#contact" 
+                            className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <span className="relative z-10 flex items-center gap-2">
+                                Contact Me
+                                <motion.span
+                                    animate={{ x: [0, 5, 0] }}
+                                    transition={{ duration: 1.5, repeat: Infinity }}
+                                >
+                                    →
+                                </motion.span>
+                            </span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                        </motion.a>
+
+                        <motion.a 
+                            href="/home/promantus/Downloads/Ragavan resume.docx" 
+                            download="Ragavan_Resume.docx"
+                            className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-full font-semibold transition-all duration-300 hover:border-purple-500 hover:text-purple-600 dark:hover:border-purple-400 dark:hover:text-purple-400 flex items-center gap-2 group"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Download Resume
+                            <motion.span
+                                animate={{ y: [0, -2, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity }}
+                                className="group-hover:animate-bounce"
+                            >
+                                📄
+                            </motion.span>
+                        </motion.a>
+                    </motion.div>
+
+                    {/* Floating Stats */}
+                    <motion.div 
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-2xl mx-auto"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 2, duration: 1 }}
+                    >
+                        {[
+                            { label: 'Years Experience', value: 3, suffix: '+' },
+                            { label: 'Projects Completed', value: 5, suffix: '+' },
+                            { label: 'Technologies', value: 10, suffix: '+' },
+                            { label: 'Happy Clients', value: 2, suffix: '' }
+                        ].map((stat, index) => (
+                            <motion.div 
+                                key={stat.label}
+                                className="text-center p-4 rounded-xl bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10"
+                                whileHover={{ scale: 1.05, y: -5 }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                                    <CountUp end={stat.value} duration={2.5} />{stat.suffix}
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">{stat.label}</div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
-            </div>
-            {/* Page-1- end */}
+
+                {/* Scroll indicator */}
+                <motion.div 
+                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                    <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center">
+                        <div className="w-1 h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-2 animate-pulse"></div>
+                    </div>
+                </motion.div>
+            </section>
 
             {/* Page-2- start */}
             <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
-                <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+                <h4 class="text-center mb-2 text-xl font-Ovo">Introduction</h4>
                 <h2 class="text-center text-5xl font-Ovo">About me</h2>
                 <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
                     <div class="max-w-max mx-auto relative">
-                        <img src="https://elianajade.com/assets/user-image-Dc_rZ4ty.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none" />
+                        <img src="https://elianajade.com/assets/user-image-Dc_rZ4ty.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none animate-fade-up animate-ease-in" />
                     </div>
                     <div class="flex-1">
                         <p class="mb-10 max-w-3xl font-Ovo">
@@ -106,50 +268,6 @@ export default function App() {
             {/* Page-2- end */}
 
             {/* Contact section */}
-            <div id="contact"
-                class="w-full px-[12%] py-10 scroll-mt-20 bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
-                <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
-                <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
-                <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! If you have any questions,
-                    comments or feedback, please use the form below.</p>
-                <form class="max-w-2xl mx-auto">
-                    <input type="hidden" name="subject" value="Eliana Jade - New form Submission" />
-                    <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
-                        <input type="text" placeholder="Enter your name"
-                            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
-                            required="" name="name" />
-                        <input type="email" placeholder="Enter your email"
-                            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
-                            required="" name="email" />
-                    </div>
-
-                    <textarea rows="6" placeholder="Enter your message"
-                        class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
-                        required="" name="message"></textarea>
-
-                    <div class="h-captcha mb-6 max-w-full" data-captcha="true" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2">
-                        <iframe
-                            src="https://newassets.hcaptcha.com/captcha/v1/29427798d425c85c209e267347238466838cd1a9/static/hcaptcha.html#frame=checkbox&amp;id=0adjdux1h2d&amp;host=elianajade.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=off&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=50b2fe65-b00b-4b9e-ad62-3ba471098be2&amp;theme=light&amp;origin=https%3A%2F%2Felianajade.com"
-                            tabindex="0" frameborder="0" scrolling="no"
-                            allow="private-state-token-issuance 'src'; private-state-token-redemption 'src'"
-                            title="Widget containing checkbox for hCaptcha security challenge" data-hcaptcha-widget-id="0adjdux1h2d"
-                            data-hcaptcha-response=""
-                            style="pointer-events: auto; background-color: rgba(255, 255, 255, 0); width: 303px; height: 78px; overflow: hidden;"></iframe>
-
-                        <textarea
-                            id="h-captcha-response-0adjdux1h2d" name="h-captcha-response" style="display: none;"></textarea>
-                    </div>
-
-                    <button type="submit"
-                        class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">
-                        Submit now
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAWCAYAAABOm/V6AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADgSURBVHgB1ZZhDYMwEIVfUYAEJDAHSJgEHIADmAIkzMLmAAfMATjYHNxeQ5N10GT8YNftSx45fjTvNeWOAjsiIhk1UCNVIwY0buWdBtrQtJA1UYLUgSAdtKFpGQhyplJoQsOcui+CDDGCZK5TfOx7Bk3+JwiLKnB2Wljf3NgKcbkmfPSIS2/cueTUt1uncj4+J2NMCw240SbwPbTQgmZdIIDOH5ZGqcyjekkJDVyAIdCOBTSQ18XGZ7TzABrIL4xoWd+sNgVIsC+TV9+oA+fA9GmRwc5w50fMg+/CAI8ta554HhFHncIuNwAAAABJRU5ErkJggg=="
-                            alt="" class="w-4" />
-
-                    </button>
-                    <p class="mt-4"></p>
-                </form>
-            </div>
         </div>
     )
 }
