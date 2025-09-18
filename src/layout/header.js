@@ -38,11 +38,10 @@ export default function Header() {
     }, []);
 
     return (
-        <div className={`sticky top-0 z-50 fixed top-0 left-0 w-full transition duration-300 z-50`}>
-            <header className="absolute inset-x-0 top-0 z-50 flex justify-center">
-                <nav aria-label="Global"
-                    className={`w-11/12 mt-2 flex items-center justify-between p-4 lg:px-8 ${isBlurred ? "backdrop-blur-lg bg-indigo-100 transition delay-400 duration-500 rounded-t-lg rounded-b-lg dark:bg-slate-800" : "transition delay-400 duration-500 bg-transparent"}`}
-                >
+        <header className={`sticky top-0 z-50 w-full transition-all duration-300 flex justify-center`}>
+            <nav aria-label="Global"
+                className={`w-11/12 mt-2 flex items-center justify-between p-4 lg:px-8 ${isBlurred ? "backdrop-blur-lg bg-indigo-100/80 transition delay-400 duration-500 rounded-t-lg rounded-b-lg dark:bg-slate-800/80" : "transition delay-400 duration-500 bg-transparent"}`}
+            >
                     <div className="flex lg:flex-1">
                         <span className='font-bold text-gray-900 sm:text-2xl text-black-300 dark:text-white'>Ragavan</span>
                     </div>
@@ -74,49 +73,48 @@ export default function Header() {
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEGSURBVHgB5dOLCcIwEAbgixM4kiM4Qp1AR6gT1A3aDbqCm9QNqhPEC6SgoWIe9wj0h+MgKdxHkwAEsdaesSarlxmrcxYTwBpsPdSRa4gbsR2hjjx3wcIL6sk+xA1QUb5wxpg7thPWA7YYvNd97LMFyaTARHGpMDFcDkwEFwEbVHAxMP+dLC4WJo5LgYniUmFiuByYCC4Xxo4rgbHiSmFsOAoYC44KRo6jhJHiqGFkOA4YCY4LVozjhBXhuGHZOAlYFk4KloyThCXhpGHROA1YFE4L9henCfPzp5WZk9voNGEed1mZ27iNWRP2AWywRn+Kh2Vx1ob9DCLaKmFLEHPzf9BVC5XkDSKdijNM7/ULAAAAAElFTkSuQmCC" alt="" class="w-3 hidden dark:block" />
                         </a>
                     </div>
-                </nav>
-                <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-                    <div className="fixed inset-0 z-50" />
-                    <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                        <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
-                                <img
-                                    alt=""
-                                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                    className="h-8 w-auto"
-                                />
-                            </a>
-                            <button
-                                type="button"
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                            >
-                                <span className="sr-only">Close menu</span>
-                                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
-                            </button>
-                        </div>
-                        <div className="mt-6 flow-root">
-                            <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6">
-                                    {navigation.map((item) => (
-                                        <a
-                                            key={item.name}
-                                            href={item.href}
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                        >
-                                            {item.name}
-                                        </a>
-                                    ))}
-                                </div>
-                                <div className="py-6">
-                                    <button class="rounded-full ...">Save Changes</button>
-                                </div>
+            </nav>
+            <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+                <div className="fixed inset-0 z-50" />
+                <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="flex items-center justify-between">
+                        <a href="#" className="-m-1.5 p-1.5">
+                            <span className="sr-only">Your Company</span>
+                            <img
+                                alt=""
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                className="h-8 w-auto"
+                            />
+                        </a>
+                        <button
+                            type="button"
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                        >
+                            <span className="sr-only">Close menu</span>
+                            <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                        </button>
+                    </div>
+                    <div className="mt-6 flow-root">
+                        <div className="-my-6 divide-y divide-gray-500/10">
+                            <div className="space-y-2 py-6">
+                                {navigation.map((item) => (
+                                    <a
+                                        key={item.name}
+                                        href={item.href}
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    >
+                                        {item.name}
+                                    </a>
+                                ))}
+                            </div>
+                            <div className="py-6">
+                                <button class="rounded-full ...">Save Changes</button>
                             </div>
                         </div>
-                    </DialogPanel>
-                </Dialog>
-            </header>
-        </div>
+                    </div>
+                </DialogPanel>
+            </Dialog>
+        </header>
     )
 }
