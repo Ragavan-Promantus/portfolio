@@ -45,18 +45,6 @@ export default function App() {
                             src={profile} 
                             alt="Ragavan"
                         />
-                        <motion.div
-                            className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-75 blur"
-                            animate={{ 
-                                scale: [1, 1.1, 1],
-                                rotate: [0, 360]
-                            }}
-                            transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                repeatType: "reverse"
-                            }}
-                        />
                     </motion.div>
 
                     <motion.div
@@ -91,6 +79,10 @@ export default function App() {
                                 2000,
                                 'React.js Developer',
                                 2000,
+                                'PHP & Laravel Expert',
+                                2000,
+                                'AWS Cloud Developer',
+                                2000,
                             ]}
                             wrapper="span"
                             speed={50}
@@ -104,7 +96,7 @@ export default function App() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.2, duration: 0.8 }}
                     >
-                        Associate Software Engineer at <span className="font-semibold text-purple-600 dark:text-purple-400">Promantus India</span> with 3+ years of experience building secure, scalable applications using Spring Boot, Laravel, React.js, and AWS.
+                        Associate Software Engineer at <span className="font-semibold text-purple-600 dark:text-purple-400">Promantus Inc</span> specializing in designing and developing scalable applications. Proficient in Spring Boot for building secure, high-performance back-end solutions, with strong expertise in PHP and Laravel for web application development. Skilled in React.js, jQuery, and modern front-end technologies with hands-on AWS cloud experience.
                     </motion.p>
 
                     <motion.div 
@@ -132,8 +124,8 @@ export default function App() {
                         </motion.a>
 
                         <motion.a 
-                            href="/home/promantus/Downloads/Ragavan resume.docx" 
-                            download="Ragavan_Resume.docx"
+                            href="/home/promantus/Downloads/Ragavan Govindhasamy Resume 2024.docx" 
+                            download="Ragavan_Govindhasamy_Resume_2024.docx"
                             className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-full font-semibold transition-all duration-300 hover:border-purple-500 hover:text-purple-600 dark:hover:border-purple-400 dark:hover:text-purple-400 flex items-center gap-2 group"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -199,7 +191,7 @@ export default function App() {
                     </div>
                     <div class="flex-1">
                         <p class="mb-10 max-w-3xl font-Ovo">
-                            I am an full-Stack Developer with 3 years of experience in building scalable applications using Spring Boot, PHP, Laravel, React.js, and jQuery. Proficient in MySQL, PostgreSQL, GitHub, and AWS for efficient data management and deployment. Skilled in debugging, code optimization, and improving system performance. Passionate about learning new technologies and delivering high-quality software solutions.
+                            I am an Associate Software Engineer with 3 years of experience as a Full-Stack Developer, specializing in designing and developing scalable applications. Proficient in Spring Boot for building secure and high-performance back-end solutions, with strong expertise in PHP and Laravel for web application development. Skilled in front-end technologies such as HTML, React.js, and jQuery, ensuring dynamic and responsive user interfaces. Hands-on experience with databases like MySQL and PostgreSQL, enabling efficient data management and retrieval. Exposure to cloud services like AWS, contributing to scalable and secure deployment practices.
                         </p>
                         <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">
                             <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
@@ -211,8 +203,8 @@ export default function App() {
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAuCAYAAABu3ppsAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgBzZmBcdswDEXhTpARNEK7gTaoN6g7QbtBvEG9gbxB2wnsTOBsoGygbPBDHpmLDZGMQH3m8u54tnQUAZIgCIIiBgD8cGVyZfT/pQL3Xe/K3pWv8pE4gfe4ZRIj7putaqOXlXxZUskr73726vWz2PmunntpjVP+D9LsxEg0PeoMlITdufI3ofhUI9jb/FoTtAjrXLkklB9rF5+fMdXWSVoQlR8zyndSSWI2fwubgvKXNcrHtifVJteNFpQ/uXInK0Dw/TezKUwKyh+FgDcX1e4/YeIaHBLKH4REnMVrdsICc+9AVT7K0HTCIjE6FyGCxvbvQwntDX4Kl616PgsTPbdCBvMNcStM0DA+QfBumlUuWeNN6L96NxAXmTbPx81mUxPF5smM0sjoBObu+ZCp9wtvByV7iIH5RkPpBBaaZ6LevVhxHx2ZnUjNbKHulJBt6wRC/H9hdQKG8DnWTXViECuZmfCNm6JHGMNnhAPPmJDtB9XmudwHB6RZnIlARfgM5lkEIfWR4l3bxIrj46foBFaGzygfaTtLWzkXW+wECOEzglPheEaEiHLmJQr1NZ1UgvR6HGs6oW1zzNSjh89Im7I9qxE74ad1yI1AYsTsvnxZu55e2KBh+Iz52uLmlhAWnqYTEmid3cM8+0w9nkYZNyzKThvQ2ecHIYK5O34UJmh/utPtUxzEtQAN5fiIfHjRCQs0yj4XlN8LEzTIPheUpybeXoVpQb2sAMFlpg45R2EDsn/G221oe+WjQFr2GSFDgQ8xmyuhJyVsJxVgfpX7yl5aAsLtC/K3ofyrKCV4dficUX4C8x6hIFzH6ubdMaP8ollkxEJn9VwT/5yv/j+58s3lULlxTgmEXXhA/eL1G9Yhls7y7QuIfii2tUincgAAAABJRU5ErkJggg=="
                                     alt="" class="w-7 mt-3 hidden dark:block"
                                 />
-                                <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
-                                <p class="text-gray-600 text-sm dark:text-white/80">Java, PHP,  React.js,  jQuery, JavaScript, bootstrap 5, Material UI, HTML5, CSS3, XML,  MySQL, MongoDB, PostgreSQL, Laravel, Spring Boot </p>
+                                <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Programming & Technologies</h3>
+                                <p class="text-gray-600 text-sm dark:text-white/80">Java, PHP, React.js, jQuery, JavaScript, Bootstrap 5, Material UI, HTML5, CSS3, XML, MySQL, MongoDB, PostgreSQL, Laravel, Spring Boot, React Native</p>
                             </li>
 
                             <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
@@ -266,6 +258,471 @@ export default function App() {
                 </div>
             </div>
             {/* Page-2- end */}
+
+            {/* Skills Section */}
+            <div id="skills" className="w-full px-[12%] py-20 scroll-mt-20 bg-gray-50 dark:bg-slate-900">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h4 className="text-center mb-2 text-xl font-Ovo text-purple-600 dark:text-purple-400">Technical Expertise</h4>
+                    <h2 className="text-center text-4xl md:text-5xl font-Ovo text-gray-800 dark:text-white">Skills & Technologies</h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Operating Systems */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">🖥️</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Operating Systems</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['Windows', 'Linux', 'Ubuntu'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Programming Languages */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">💻</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Programming Languages</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['Java', 'PHP', 'JavaScript', 'HTML5', 'CSS3', 'XML'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Frontend Technologies */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">🎨</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Frontend</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['React.js', 'jQuery', 'Bootstrap 5', 'Material UI', 'React Native'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Backend Frameworks */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-orange-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">⚙️</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Backend Frameworks</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['Spring Boot', 'Laravel'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Databases */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-red-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">🗄️</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Databases</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['MySQL', 'PostgreSQL', 'MongoDB'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Version Control */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-indigo-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">📚</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Version Control</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['Git', 'GitHub'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Cloud Services */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-yellow-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.7 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">☁️</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Cloud Services</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['AWS (Amazon Web Services)', 'API Gateway', 'EC2'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Development Tools */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-pink-500"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.8 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-2xl mb-4">🛠️</div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Development Tools</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['Visual Studio Code', 'Sublime', 'PhpMyAdmin', 'MySQL Workbench', 'Adminer'].map((skill, index) => (
+                                <span key={index} className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 text-xs rounded-full">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+            {/* Skills Section End */}
+
+            {/* Experience Section */}
+            <div id="experience" className="w-full px-[12%] py-20 scroll-mt-20">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h4 className="text-center mb-2 text-xl font-Ovo text-purple-600 dark:text-purple-400">Career Journey</h4>
+                    <h2 className="text-center text-4xl md:text-5xl font-Ovo text-gray-800 dark:text-white">Work Experience</h2>
+                </motion.div>
+
+                <div className="max-w-4xl mx-auto">
+                    {/* Current Role - Promantus Inc */}
+                    <motion.div 
+                        className="relative pl-8 pb-12"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                    >
+                        {/* Timeline line */}
+                        <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-purple-500 to-pink-500"></div>
+                        {/* Timeline dot */}
+                        <div className="absolute left-[-6px] top-2 w-3 h-3 bg-purple-500 rounded-full border-2 border-white dark:border-slate-800"></div>
+                        
+                        <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
+                            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">Associate Software Engineer</h3>
+                                    <p className="text-purple-600 dark:text-purple-400 font-semibold">Promantus Inc, Chennai</p>
+                                </div>
+                                <div className="mt-2 md:mt-0">
+                                    <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm font-medium">
+                                        September 2023 - Present
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <ul className="text-gray-600 dark:text-gray-300 space-y-3">
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Developed and maintained the backend of a payment application using <strong>Spring Boot</strong>, ensuring secure and efficient transaction processing.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Built the front end of the payment application using <strong>React.js and Material UI</strong>, creating an intuitive and responsive user interface.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Designed and implemented payment creation, cancellation, and settlement report generation features, enabling seamless operations for merchants.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Integrated payment gateway APIs to support multiple payment methods, including credit cards and digital wallets.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Built and optimized <strong>RESTful APIs</strong> for payment notifications and custom invoice generation, improving system reliability and performance.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Utilized <strong>AWS services</strong>, including API Gateway and EC2, for scalable hosting and secure API management.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-purple-500 mr-3 mt-1">•</span>
+                                    Implemented user roles and permissions for access control, enhancing security and ensuring proper authorization.
+                                </li>
+                            </ul>
+                        </div>
+                    </motion.div>
+
+                    {/* Previous Role - Proflujo Technology */}
+                    <motion.div 
+                        className="relative pl-8"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                    >
+                        {/* Timeline line */}
+                        <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-pink-500 to-transparent"></div>
+                        {/* Timeline dot */}
+                        <div className="absolute left-[-6px] top-2 w-3 h-3 bg-pink-500 rounded-full border-2 border-white dark:border-slate-800"></div>
+                        
+                        <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
+                            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">Full-Stack Developer</h3>
+                                    <p className="text-pink-600 dark:text-pink-400 font-semibold">Proflujo Technology Pvt Ltd, Chennai</p>
+                                </div>
+                                <div className="mt-2 md:mt-0">
+                                    <span className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                                        October 2021 - September 2023
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <ul className="text-gray-600 dark:text-gray-300 space-y-3">
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Developed and maintained web applications using <strong>React.js, jQuery, JavaScript, Laravel, PHP, HTML, CSS, and Bootstrap 5</strong>.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Customized <strong>Odoo modules</strong> and created custom models to meet specific business requirements.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Collaborated with cross-functional teams to gather requirements, design solutions, and implement features.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Created responsive user interfaces utilizing modern front-end frameworks and libraries.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Implemented back-end functionalities, including <strong>database interactions and API integrations</strong>.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Conducted thorough testing and debugging to ensure code quality and application stability.
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-pink-500 mr-3 mt-1">•</span>
+                                    Contributed to the successful deployment and release of multiple projects within set timelines.
+                                </li>
+                            </ul>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+            {/* Experience Section End */}
+
+            {/* Projects Section */}
+            <div id="projects" className="w-full px-[12%] py-20 scroll-mt-20 bg-gray-50 dark:bg-slate-900">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h4 className="text-center mb-2 text-xl font-Ovo text-purple-600 dark:text-purple-400">Portfolio Showcase</h4>
+                    <h2 className="text-center text-4xl md:text-5xl font-Ovo text-gray-800 dark:text-white">Featured Projects</h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    {/* SBAS Project */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6">
+                            <div className="text-3xl mb-4">🛡️</div>
+                            <h3 className="text-2xl font-bold text-white mb-2">SBAS - Safety Behaviour Analysis System</h3>
+                            <p className="text-purple-100">Road Safety Education Platform</p>
+                        </div>
+                        <div className="p-6">
+                            <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                A comprehensive platform that integrates quiz and gaming models to enhance users' awareness and knowledge of road safety. The system educates users on traffic rules, signs, and safe driving practices while providing an enjoyable learning experience.
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Tech Stack:</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['React.js', 'Laravel', 'MySQL'].map((tech, index) => (
+                                        <span key={index} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm rounded-full">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="text-sm text-gray-500 dark:text-gray-400">
+                                Role: <span className="font-medium text-gray-700 dark:text-gray-200">Developer</span>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Sacola Wallets Project */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-6">
+                            <div className="text-3xl mb-4">💰</div>
+                            <h3 className="text-2xl font-bold text-white mb-2">Sacola Wallets</h3>
+                            <p className="text-blue-100">Blockchain Wallet & NFT Marketplace</p>
+                        </div>
+                        <div className="p-6">
+                            <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Provides native wallet services for Rubix Blockchain, featuring NFT Marketplace and bridges for porting crypto assets between different blockchains using trustless bridges technology.
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Tech Stack:</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['React.js', 'Laravel', 'MySQL'].map((tech, index) => (
+                                        <span key={index} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm rounded-full">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="text-sm text-gray-500 dark:text-gray-400">
+                                Role: <span className="font-medium text-gray-700 dark:text-gray-200">Developer</span>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* TMS Project */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-6">
+                            <div className="text-3xl mb-4">📋</div>
+                            <h3 className="text-2xl font-bold text-white mb-2">TMS - Task Management System</h3>
+                            <p className="text-green-100">Project & Team Management Platform</p>
+                        </div>
+                        <div className="p-6">
+                            <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                A robust platform designed to streamline and optimize task organization, delegation, and tracking. Provides a centralized hub for teams to efficiently assign tasks, monitor progress, and ensure timely completion.
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Tech Stack:</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['React.js', 'Laravel', 'MySQL'].map((tech, index) => (
+                                        <span key={index} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm rounded-full">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="text-sm text-gray-500 dark:text-gray-400">
+                                Role: <span className="font-medium text-gray-700 dark:text-gray-200">Developer</span>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Expense Tracker Project */}
+                    <motion.div 
+                        className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6">
+                            <div className="text-3xl mb-4">📊</div>
+                            <h3 className="text-2xl font-bold text-white mb-2">Expense Tracker for Swadha Foundation</h3>
+                            <p className="text-orange-100">Odoo ERP Customization</p>
+                        </div>
+                        <div className="p-6">
+                            <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Customized and developed Odoo modules to meet specific business requirements, including CRM, Sales, and Inventory management. Developed Timesheets and Leave application modules using ODOO framework.
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Tech Stack:</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['Python', 'JavaScript', 'XML', 'PostgreSQL', 'ODOO'].map((tech, index) => (
+                                        <span key={index} className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm rounded-full">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="text-sm text-gray-500 dark:text-gray-400">
+                                Role: <span className="font-medium text-gray-700 dark:text-gray-200">Developer</span>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+            {/* Projects Section End */}
 
             {/* Contact section */}
         </div>
