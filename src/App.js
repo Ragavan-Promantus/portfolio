@@ -174,7 +174,7 @@ export default function App() {
                 </motion.div>
             </section>
 
-            {/* Page-2- start */}
+            {/* Introduction Section */}
             <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
                 <h4 class="text-center mb-2 text-xl font-Ovo">Introduction</h4>
                 <h2 class="text-center text-5xl font-Ovo">About me</h2>
@@ -250,7 +250,6 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            {/* Page-2- end */}
 
             {/* Skills Section */}
             <div id="skills" className="w-full px-[12%] py-20 scroll-mt-20 bg-gray-50 dark:bg-slate-900">
