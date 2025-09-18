@@ -34,18 +34,11 @@ export default function App() {
             {/* Hero Section */}
             <section className='relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
                 <div className='w-full max-w-4xl text-center mx-auto'>
-                    <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                        className='relative mb-8'
-                    >
-                        <img 
-                            className='object-cover w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-purple-500 to-pink-500 shadow-2xl' 
-                            src={profile} 
-                            alt="Ragavan"
-                        />
-                    </motion.div>
+                    <img 
+                        className='object-cover w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-purple-500 to-pink-500 shadow-2xl mb-8' 
+                        src={profile} 
+                        alt="Ragavan"
+                    />
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -724,7 +717,173 @@ export default function App() {
             </div>
             {/* Projects Section End */}
 
-            {/* Contact section */}
+            {/* Contact Section */}
+            <div id="contact" className="w-full px-[12%] py-20 scroll-mt-20">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h4 className="text-center mb-2 text-xl font-Ovo text-purple-600 dark:text-purple-400">Get In Touch</h4>
+                    <h2 className="text-center text-4xl md:text-5xl font-Ovo text-gray-800 dark:text-white">Contact Me</h2>
+                    <p className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 font-Ovo">
+                        Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+                    </p>
+                </motion.div>
+
+                <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    {/* Contact Information */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="space-y-8"
+                    >
+                        <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Let's Connect</h3>
+                            
+                            <div className="space-y-6">
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                        <span className="text-2xl">📧</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-800 dark:text-white">Email</h4>
+                                        <a href="mailto:ragavanraj2001@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">
+                                            ragavanraj2001@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                        <span className="text-2xl">📱</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-800 dark:text-white">Phone</h4>
+                                        <a href="tel:+919025906686" className="text-purple-600 dark:text-purple-400 hover:underline">
+                                            +91 9025906686
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                        <span className="text-2xl">📍</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-800 dark:text-white">Location</h4>
+                                        <p className="text-gray-600 dark:text-gray-400">Chennai, Tamil Nadu, India</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                        <span className="text-2xl">💼</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-800 dark:text-white">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/ragavan-govindhasamy/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 hover:underline">
+                                            Connect with me
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Social Links */}
+                        <motion.div 
+                            className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-xl"
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <h3 className="text-xl font-bold text-white mb-4">Follow Me</h3>
+                            <div className="flex space-x-4">
+                                <a href="https://github.com/ragavanraj" target="_blank" rel="noopener noreferrer" 
+                                   className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <img src={gitHubLogo} alt="GitHub" className="w-6 h-6" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/ragavan-govindhasamy/" target="_blank" rel="noopener noreferrer" 
+                                   className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <span className="text-white text-lg">💼</span>
+                                </a>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Contact Form */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Send Message</h3>
+                            
+                            <form className="space-y-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                            Your Name
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-slate-700 dark:text-white transition-colors"
+                                            placeholder="Enter your name"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                            Email Address
+                                        </label>
+                                        <input 
+                                            type="email" 
+                                            className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-slate-700 dark:text-white transition-colors"
+                                            placeholder="Enter your email"
+                                        />
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                        Subject
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-slate-700 dark:text-white transition-colors"
+                                        placeholder="Enter subject"
+                                    />
+                                </div>
+                                
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                        Message
+                                    </label>
+                                    <textarea 
+                                        rows={6}
+                                        className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-slate-700 dark:text-white transition-colors resize-none"
+                                        placeholder="Enter your message"
+                                    ></textarea>
+                                </div>
+                                
+                                <motion.button 
+                                    type="submit"
+                                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transition-all duration-300"
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    Send Message 🚀
+                                </motion.button>
+                            </form>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+            {/* Contact Section End */}
         </div>
     )
 }
