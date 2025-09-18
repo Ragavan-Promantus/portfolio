@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3a4e7e65.css",
-    "main.js": "/portfolio/static/js/main.04e069f9.js",
+    "main.css": "/portfolio/static/css/main.7587d1c7.css",
+    "main.js": "/portfolio/static/js/main.e5935152.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/photo_2025-09-18_22-41-17.jpg": "/portfolio/static/media/photo_2025-09-18_22-41-17.3ce73a250f80a9943fd6.jpg",
+    "static/media/Ragavan Govindhasamy Resume.docx": "/portfolio/static/media/Ragavan Govindhasamy Resume.47783e9d69ec471e21c3.docx",
     "static/media/aws-icon-2048x2048-ptyrjxdo.png": "/portfolio/static/media/aws-icon-2048x2048-ptyrjxdo.fde7be569fbbed8586ba.png",
+    "static/media/photo_2025-09-18_22-41-17-original.jpg": "/portfolio/static/media/photo_2025-09-18_22-41-17-original.20ec1c7af9301c71c2b7.jpg",
     "static/media/github-6980894_960_720.webp": "/portfolio/static/media/github-6980894_960_720.010a2fd15fdc36a3ffbf.webp",
-    "static/media/r-letter.webp": "/portfolio/static/media/r-letter.bfd2e7b935454fb1abcd.webp",
+    "static/media/vs-code-icon.png": "/portfolio/static/media/vs-code-icon.d99ab65a08c3e4c5fd73.png",
     "index.html": "/portfolio/index.html",
-    "main.3a4e7e65.css.map": "/portfolio/static/css/main.3a4e7e65.css.map",
-    "main.04e069f9.js.map": "/portfolio/static/js/main.04e069f9.js.map",
+    "main.7587d1c7.css.map": "/portfolio/static/css/main.7587d1c7.css.map",
+    "main.e5935152.js.map": "/portfolio/static/js/main.e5935152.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a4e7e65.css",
-    "static/js/main.04e069f9.js"
+    "static/css/main.7587d1c7.css",
+    "static/js/main.e5935152.js"
   ]
 }
