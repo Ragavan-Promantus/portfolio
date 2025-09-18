@@ -175,30 +175,58 @@ export default function App() {
             </section>
 
             {/* About Section */}
-            <div id="about" className="w-full px-[12%] py-20 scroll-mt-20 bg-white dark:bg-slate-900">
+            <div id="about" className="w-full px-[12%] py-24 scroll-mt-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-950 relative overflow-hidden">
+                {/* Background decorative elements */}
+                <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-indigo-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+                
                 <motion.div 
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-20 relative z-10"
                 >
-                    <h4 className="text-center mb-2 text-xl font-Ovo text-purple-600 dark:text-purple-400">Introduction</h4>
-                    <h2 className="text-center text-4xl md:text-5xl font-Ovo text-gray-800 dark:text-white">About Me</h2>
+                    <motion.h4 
+                        className="text-center mb-3 text-xl font-Ovo bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        Introduction
+                    </motion.h4>
+                    <motion.h2 
+                        className="text-center text-5xl md:text-6xl lg:text-7xl font-Ovo bg-gradient-to-r from-gray-800 via-slate-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-slate-200 bg-clip-text text-transparent font-bold"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: true }}
+                    >
+                        About Me
+                    </motion.h2>
                 </motion.div>
-                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 max-w-6xl mx-auto">
+                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 max-w-6xl mx-auto relative z-10">
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
-                        className="flex-shrink-0 mb-10 lg:mb-0"
+                        className="flex-shrink-0 mb-10 lg:mb-0 relative"
                     >
-                        <img
-                            src="https://elianajade.com/assets/user-image-Dc_rZ4ty.png"
-                            alt="Ragavan"
-                            className="w-56 h-56 sm:w-72 sm:h-72 object-cover rounded-3xl shadow-xl border-4 border-gradient-to-r from-purple-500 to-pink-500"
-                        />
+                        {/* Decorative ring around image */}
+                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity animate-pulse"></div>
+                        <div className="relative">
+                            <img
+                                src="https://elianajade.com/assets/user-image-Dc_rZ4ty.png"
+                                alt="Ragavan"
+                                className="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-slate-700 hover:scale-105 transition-transform duration-500"
+                            />
+                            {/* Floating badge */}
+                            <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                                Available for hire
+                            </div>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
