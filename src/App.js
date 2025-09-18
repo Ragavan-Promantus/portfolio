@@ -35,7 +35,7 @@ export default function App() {
             <Header />
 
             {/* Hero Section */}
-            <section className='relative h-[calc(100vh-4rem)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
+            <section className='relative h-auto sm:h-[calc(100vh-4rem)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
                 <div className='w-full max-w-4xl text-center mx-auto'>
                     <img 
                         className='object-cover w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-purple-500 to-pink-500 shadow-2xl mb-8' 
@@ -223,7 +223,7 @@ export default function App() {
                             <img
                                 src={profile2}
                                 alt="Ragavan"
-                                className="w-64 h-64 sm:w-80 sm:h-[400px] object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-white hover:scale-105 transition-transform duration-500"
+                                className="w-64 h-80 sm:w-80 sm:h-[400px] object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-white hover:scale-105 transition-transform duration-500"
                             />
                             {/* Floating badge */}
                             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
