@@ -4,9 +4,12 @@ import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 import './index.css';
 import Header from './layout/header';
-import profile from '../src/images/r-letter.webp';
+import profile from '../src/images/photo_2025-09-18_22-41-17.jpg';
+import profile2 from '../src/images/photo_2025-09-18_22-41-17-original.jpg';
+import vscodeIcon from '../src/images/vs-code-icon.png';
 import gitHubLogo from '../src/images/github-6980894_960_720.webp';
 import awsLogo from '../src/images/aws-icon-2048x2048-ptyrjxdo.png';
+import resume from '../src/images/Ragavan Govindhasamy Resume.docx';
 
 export default function App() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -32,7 +35,7 @@ export default function App() {
             <Header />
 
             {/* Hero Section */}
-            <section className='relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
+            <section className='relative h-[calc(100vh-4rem)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
                 <div className='w-full max-w-4xl text-center mx-auto'>
                     <img 
                         className='object-cover w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-purple-500 to-pink-500 shadow-2xl mb-8' 
@@ -117,8 +120,8 @@ export default function App() {
                         </motion.a>
 
                         <motion.a 
-                            href="/home/promantus/Downloads/Ragavan Govindhasamy Resume 2024.docx" 
-                            download="Ragavan_Govindhasamy_Resume_2024.docx"
+                            href={resume} 
+                            download="Ragavan Govindhasamy Resume.docx"
                             className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-full font-semibold transition-all duration-300 hover:border-purple-500 hover:text-purple-600 dark:hover:border-purple-400 dark:hover:text-purple-400 flex items-center gap-2 group"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -215,12 +218,12 @@ export default function App() {
                         className="flex-shrink-0 mb-10 lg:mb-0 relative"
                     >
                         {/* Decorative ring around image */}
-                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity animate-pulse"></div>
+                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity animate-pulse"></div>
                         <div className="relative">
                             <img
-                                src="https://elianajade.com/assets/user-image-Dc_rZ4ty.png"
+                                src={profile2}
                                 alt="Ragavan"
-                                className="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-slate-700 hover:scale-105 transition-transform duration-500"
+                                className="w-64 h-64 sm:w-80 sm:h-[400px] object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-white hover:scale-105 transition-transform duration-500"
                             />
                             {/* Floating badge */}
                             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
@@ -245,7 +248,7 @@ export default function App() {
                                     alt="Programming"
                                     className="w-8 h-8 mb-3"
                                 />
-                                <h3 className="font-semibold text-gray-700 dark:text-white mb-2">Programming & Technologies</h3>
+                                <h3 className="font-semibold text-gray-700 dark:text-white mb-2">Technologies</h3>
                                 <p className="text-gray-600 text-sm dark:text-white/80 text-center">
                                     Java, PHP, React.js, jQuery, JavaScript, Bootstrap 5, Material UI, HTML5, CSS3, XML, MySQL, MongoDB, PostgreSQL, Laravel, Spring Boot, React Native
                                 </p>
@@ -276,7 +279,7 @@ export default function App() {
                         <h4 className="mb-4 text-gray-700 font-Ovo dark:text-white/80">Tools I Use</h4>
                         <div className="flex items-center gap-4 flex-wrap">
                             <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-slate-800 shadow hover:-translate-y-1 transition-transform duration-300">
-                                <img src="https://elianajade.com/assets/vscode-xCMPv9CZ.png" alt="VSCode" className="w-7 h-7" />
+                                <img src={vscodeIcon} alt="VSCode" className="w-11 h-11" />
                             </div>
                             <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-slate-800 shadow hover:-translate-y-1 transition-transform duration-300">
                                 <img src={gitHubLogo} alt="GitHub" className="w-7 h-7" />
@@ -520,31 +523,31 @@ export default function App() {
                             <ul className="text-gray-600 dark:text-gray-300 space-y-3">
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Developed and maintained the backend of a payment application using <strong>Spring Boot</strong>, ensuring secure and efficient transaction processing.
+                                    <span>Developed and maintained the backend of a payment application using <strong>Spring Boot</strong>, ensuring secure and efficient transaction processing.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Built the front end of the payment application using <strong>React.js and Material UI</strong>, creating an intuitive and responsive user interface.
+                                    <span>Built the front end of the payment application using <strong>React.js and Material UI</strong>, creating an intuitive and responsive user interface.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Designed and implemented payment creation, cancellation, and settlement report generation features, enabling seamless operations for merchants.
+                                    <span>Designed and implemented payment creation, cancellation, and settlement report generation features, enabling seamless operations for merchants.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Integrated payment gateway APIs to support multiple payment methods, including credit cards and digital wallets.
+                                    <span>Integrated payment gateway APIs to support multiple payment methods, including credit cards and digital wallets.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Built and optimized <strong>RESTful APIs</strong> for payment notifications and custom invoice generation, improving system reliability and performance.
+                                    <span>Built and optimized <strong>RESTful APIs</strong> for payment notifications and custom invoice generation, improving system reliability and performance.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Utilized <strong>AWS services</strong>, including API Gateway and EC2, for scalable hosting and secure API management.
+                                    <span>Utilized <strong>AWS services</strong>, including API Gateway and EC2, for scalable hosting and secure API management.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-purple-500 mr-3 mt-1">•</span>
-                                    Implemented user roles and permissions for access control, enhancing security and ensuring proper authorization.
+                                    <span>Implemented user roles and permissions for access control, enhancing security and ensuring proper authorization.</span>
                                 </li>
                             </ul>
                         </div>
@@ -579,31 +582,31 @@ export default function App() {
                             <ul className="text-gray-600 dark:text-gray-300 space-y-3">
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Developed and maintained web applications using <strong>React.js, jQuery, JavaScript, Laravel, PHP, HTML, CSS, and Bootstrap 5</strong>.
+                                    <span>Developed and maintained web applications using <strong>React.js, jQuery, JavaScript, Laravel, PHP, HTML, CSS, and Bootstrap 5</strong>.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Customized <strong>Odoo modules</strong> and created custom models to meet specific business requirements.
+                                    <span>Customized <strong>Odoo modules</strong> and created custom models to meet specific business requirements.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Collaborated with cross-functional teams to gather requirements, design solutions, and implement features.
+                                    <span>Collaborated with cross-functional teams to gather requirements, design solutions, and implement features.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Created responsive user interfaces utilizing modern front-end frameworks and libraries.
+                                    <span>Created responsive user interfaces utilizing modern front-end frameworks and libraries.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Implemented back-end functionalities, including <strong>database interactions and API integrations</strong>.
+                                    <span>Implemented back-end functionalities, including <strong>database interactions and API integrations</strong>.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Conducted thorough testing and debugging to ensure code quality and application stability.
+                                    <span>Conducted thorough testing and debugging to ensure code quality and application stability.</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-pink-500 mr-3 mt-1">•</span>
-                                    Contributed to the successful deployment and release of multiple projects within set timelines.
+                                    <span>Contributed to the successful deployment and release of multiple projects within set timelines.</span>
                                 </li>
                             </ul>
                         </div>
@@ -800,8 +803,8 @@ export default function App() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-gray-800 dark:text-white">Email</h4>
-                                        <a href="mailto:ragavanraj2001@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">
-                                            ragavanraj2001@gmail.com
+                                        <a href="mailto:ragavangtpt@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">
+                                            ragavangtpt@gmail.com
                                         </a>
                                     </div>
                                 </div>
@@ -812,8 +815,8 @@ export default function App() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-gray-800 dark:text-white">Phone</h4>
-                                        <a href="tel:+919025906686" className="text-purple-600 dark:text-purple-400 hover:underline">
-                                            +91 9025906686
+                                        <a href="tel:+916374133569" className="text-purple-600 dark:text-purple-400 hover:underline">
+                                            +91 6374133569
                                         </a>
                                     </div>
                                 </div>
@@ -834,7 +837,7 @@ export default function App() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-gray-800 dark:text-white">LinkedIn</h4>
-                                        <a href="https://www.linkedin.com/in/ragavan-govindhasamy/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 hover:underline">
+                                        <a href="https://www.linkedin.com/in/ragavan-g-353705250/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 hover:underline">
                                             Connect with me
                                         </a>
                                     </div>
@@ -850,11 +853,11 @@ export default function App() {
                         >
                             <h3 className="text-xl font-bold text-white mb-4">Follow Me</h3>
                             <div className="flex space-x-4">
-                                <a href="https://github.com/ragavanraj" target="_blank" rel="noopener noreferrer" 
+                                <a href="https://github.com/Ragavanbca" target="_blank" rel="noopener noreferrer" 
                                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
                                     <img src={gitHubLogo} alt="GitHub" className="w-6 h-6" />
                                 </a>
-                                <a href="https://www.linkedin.com/in/ragavan-govindhasamy/" target="_blank" rel="noopener noreferrer" 
+                                <a href="https://www.linkedin.com/in/ragavan-g-353705250/" target="_blank" rel="noopener noreferrer" 
                                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
                                     <span className="text-white text-lg">💼</span>
                                 </a>

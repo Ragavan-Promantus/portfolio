@@ -40,7 +40,7 @@ export default function Header() {
     return (
         <header className={`sticky top-0 z-50 w-full transition-all duration-300 flex justify-center`}>
             <nav aria-label="Global"
-                className={`w-11/12 mt-2 flex items-center justify-between p-4 lg:px-8 ${isBlurred ? "backdrop-blur-lg bg-indigo-100/80 transition delay-400 duration-500 rounded-t-lg rounded-b-lg dark:bg-slate-800/80" : "transition delay-400 duration-500 bg-transparent"}`}
+                className={`w-11/12 mt-2 flex items-center justify-between p-4 lg:px-8 ${isBlurred ? "backdrop-blur-lg bg-white-100/80 transition delay-400 duration-500 rounded-t-lg rounded-b-lg dark:bg-slate-800/80" : "transition delay-400 duration-500 bg-transparent"}`}
             >
                     <div className="flex lg:flex-1">
                         <span className='font-bold text-gray-900 sm:text-2xl text-black-300 dark:text-white'>Ragavan</span>
