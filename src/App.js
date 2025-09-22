@@ -4,6 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 import './index.css';
 import Header from './layout/header';
+import Footer from './layout/footer';
 import profile from '../src/images/photo_2025-09-18_22-41-17.jpg';
 import profile2 from '../src/images/photo_2025-09-18_22-41-17-original.jpg';
 import vscodeIcon from '../src/images/vs-code-icon.png';
@@ -24,7 +25,7 @@ export default function App() {
     }, []);
 
     return (
-        <div className="bg-white dark:bg-slate-800 dark:text-white cursor-fancy relative overflow-hidden">
+        <div className="bg-white dark:bg-slate-800 dark:text-white cursor-fancy relative overflow-hidden pt-20">
             {/* Animated background elements */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse dark:opacity-10"></div>
@@ -923,7 +924,7 @@ export default function App() {
                                 
                                 <motion.button 
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transition-all duration-300"
+                                    className="w-full cursor-pointer bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transition-all duration-300"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
@@ -935,6 +936,8 @@ export default function App() {
                 </div>
             </div>
             {/* Contact Section End */}
+
+            <Footer />
         </div>
     )
 }
