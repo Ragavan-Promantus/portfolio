@@ -123,6 +123,8 @@ export default function App() {
                         <motion.a 
                             href={resume} 
                             download="Ragavan Govindhasamy Resume.docx"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-full font-semibold transition-all duration-300 hover:border-purple-500 hover:text-purple-600 dark:hover:border-purple-400 dark:hover:text-purple-400 flex items-center gap-2 group"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -876,7 +878,13 @@ export default function App() {
                         <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
                             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Send Message</h3>
                             
-                            <form className="space-y-6">
+                            <form 
+                                className="space-y-6"
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    alert('Message feature is for demonstration. Please use the email or phone links for direct contact!');
+                                }}
+                            >
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
